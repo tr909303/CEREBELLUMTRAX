@@ -1,79 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEREBELLUM TRAX PROMO</title>
-    <link rel="stylesheet" href="output.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEREBELLUM TRAX</title>
+  <!-- Link to Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://db.onlinewebfonts.com/c/d2639bbd2646a188110e8270ec817322?family=GAMECUBEN+DualSet" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Additional CSS styles, if any */
+    /* Add any custom styles here */
+
+    @media (max-width: 640px) {
+      .video-bg {
+        height: auto;
+      }
+      .content {
+        max-width: 100%;
+      }
+      .btn {
+        width: 100%;
+      }
+      .btn-container {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-<body class="bg-black text-gray-600 font-body">
-    <main class="ml-64 mr-64 bg-black">
-        <div class="mb-4">
-            <div class="flex justify-between items-center">
-                    <img src="img/SOUNDCLOUD.png" alt="Cerebellum Logo">
-            </div>
+
+<body>
+  <div class="video-bg flex items-center justify-center min-h-screen">
+    <!-- Video background code -->
+    <video src="landscape.mp4" loop autoplay muted playsinline class="absolute top-0 left-0 w-full h-full object-cover"></video>
+    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-75"></div>
+    <!-- Content container -->
+    <div class="flex flex-col justify-center items-center h-full text-white relative px-6 md:px-12 lg:px-24">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mt-16 mb-8">CEREBELLUM</h1>
+      <p class="text-lg text-center mb-12">WEBSITE UNDER CONSTRUCTION</p>
+      <div class="flex gap-4 md:flex-row flex-col btn-container justify-center items-center">
+        <a href="#" class="btn btn-primary text-lg px-8 py-3 rounded-full bg-green-500 hover:bg-green-600 text-black hover:text-white transition-all duration-300"
+          onclick="showContent('home')">HOME</a>
+        <a href="#" class="btn btn-primary text-lg px-8 py-3 rounded-full bg-green-500 hover:bg-green-600 text-black hover:text-white transition-all duration-300"
+          onclick="showContent('music')">MUSIC</a>
+        <a href="#" class="btn btn-primary text-lg px-8 py-3 rounded-full bg-green-500 hover:bg-green-600 text-black hover:text-white transition-all duration-300"
+          onclick="showContent('sample-packs')">SAMPLES</a>
+        <a href="#" class="btn btn-primary text-lg px-8 py-3 rounded-full bg-green-500 hover:bg-green-600 text-black hover:text-white transition-all duration-300"
+          onclick="showContent('contacts')">CONTACTS</a>
+      </div>
+
+      <!-- Content sections -->
+      <div class="content hidden mt-8 p-4 border border-white rounded-lg max-w-md" id="home-content">
+        <h2 class="text-xl font-bold mb-4">Welcome to Cerebellum</h2>
+        <p>Welcome Cerebellum</p>
+      </div>
+      <div class="content hidden mt-8 p-4 border border-white rounded-lg max-w-md" id="music-content">
+        <h2 class="text-xl font-bold mb-4">Check out our latest music releases!</h2>
+        <div class="flex gap-4 md:flex-row flex-col btn-container justify-center">
+          <a href="http://cerebellumtrax.bandcamp.com" class="btn btn-primary text-lg px-8 py-3 rounded-full bg-blue-500 hover:bg-blue-600 text-white hover:text-black transition-all duration-300">
+      <i class="fab fa-bandcamp mr-2"></i>
+            Bandcamp
+          </a>
+          <a href="https://www.youtube.com/@cerebellumtrax" class="btn btn-primary text-lg px-8 py-3 rounded-full bg-red-600 hover:bg-red-700 text-white hover:text-black transition-all duration-300">
+            <i class="fab fa-youtube mr-2"></i>
+            YouTube
+          </a>
         </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <!-- Primeira Coluna -->
-            <div class="w-full">
-                <div>
-                    <img src="img/slide1.jpg" alt="Cerebellum">
-                </div>
-            </div>
-
-            <!-- Segunda Coluna -->
-            <div class="w-full">
-                <div>
-                    <!-- Conteúdo do SoundCloud iframe e formulário aqui -->
-                   <iframe width="100%" height="595" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1761536199%3Fsecret_token%3Ds-isfmVDMarz8&color=%23243c32&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/cerebellum-recs" title="Cerebellum Recs" target="_blank" style="color: #cccccc; text-decoration: none;">Cerebellum Recs</a> · <a href="https://soundcloud.com/cerebellum-recs/sets/cardao-guetto-rhythms-ep/s-isfmVDMarz8" title="CARDAO - GUETTO RHYTHMS EP" target="_blank" style="color: #cccccc; text-decoration: none;">CARDAO - GUETTO RHYTHMS EP</a></div>
-                </div>
-                <div class="flex justify-center items-center mt-6">
-                    <a href="downloads\CARDAO-GUETTO RHYTHMS EP - CRBLM001 MP3-320.rar" class="bg-blue-800 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full ml-4">
-                        DOWNLOAD MP3
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- FORMULARIO -->
-       <div class="mt-6">
-        <form id="contact-form" action="https://formspree.io/f/mzbndegg" method="POST" class="mx-auto">
-            <div class="form-group mb-6">
-                <input type="text" name="name" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7" placeholder="Nome" required>
-            </div>
-            <div class="form-group mb-6">
-                <input type="email" name="email" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8" placeholder="Endereço de Email" required>
-            </div>
-            <div class="form-group mb-6">
-                <textarea name="Feedback" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-yellow-500 focus:outline-none" id="exampleFormControlTextarea13" rows="3" placeholder="Feedback" required></textarea>
-            </div>
-            <button type="submit" class="w-full px-6 py-2.5 bg-blue-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-600 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-600 active:shadow-lg transition duration-150 ease-in-out">Send</button>
-        </form>
-        
+      </div>
+      <div class="content hidden mt-8 p-4 border border-white rounded-lg max-w-md" id="sample-packs-content">
+        <h2 class="text-xl font-bold mb-4">Explore our sample packs collection!</h2>
+        <p>SAMPLE PACKS SOON HERE AND BANDCAMP</p>
+      </div>
     </div>
+  </div>
 
-    </main>
-
-    <footer class="flex flex-col items-center bg-black text-center text-white">
-        <div class="container px-6 pt-6">
-            <div class="mb-6 flex justify-center">
-                <a href="#!" type="button" class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0">
-                    <!-- Social media icon SVG here -->
-                </a>
-                <!-- Include other social media icons as needed -->
-            </div>
+  <footer class="py-2 sm:py-4 absolute bottom-0 w-full" style="background-color: transparent; color: white; text-align: center;">
+    <div class="container mx-auto px-6">
+      <div class="footer-content flex flex-wrap justify-center items-center">
+        <div class="w-full text-center sm:text-left mb-2 sm:mb-0">
+          <h4 class="text-lg font-bold">Follow Us</h4>
+          <div class="flex justify-center sm:justify-start mt-2 footer-icons">
+            <!-- Font Awesome Icons for social media -->
+            <a href="#" class="text-white mr-2 hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white mr-2 hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white mr-2 hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
-        
-        <!-- Copyright section -->
-        <div class="bg-black w-full p-4 text-center">
-            © 2024 Copyright:
-            <a class="text-white" href="#">Cerebellum</a>
-        </div>
-    </footer>
+      </div>
+      <div class="text-center mt-2 sm:mt-4">
+        <p class="text-xs sm:text-sm text-gray-400">All rights reserved &copy; 2024 Cerebellum</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="index.js"></script>
+  <script>
+    // Function to handle content display
+    function showContent(contentType) {
+      const contentElements = document.getElementsByClassName('content');
+      for (let i = 0; i < contentElements.length; i++) {
+        contentElements[i].style.display = 'none';
+      }
+      const selectedContent = document.getElementById(`${contentType}-content`);
+      selectedContent.style.display = 'block';
+    }
+  </script>
 </body>
+
 </html>
