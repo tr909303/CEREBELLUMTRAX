@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="output.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	
 </head>
 <body class="bg-black text-gray-600 font-body">
     <main class="ml-64 mr-64 bg-black">
         <div class="mb-4">
             <div class="flex justify-between items-center">
-                    <img src="img/SOUNDCLOUD.png" alt="Cerebellum Logo">
+                    <img src="img/SOUNDCLOUD002.png" alt="Cerebellum Logo">
             </div>
         </div>
 
@@ -20,7 +21,7 @@
             <!-- Primeira Coluna -->
             <div class="w-full">
                 <div>
-                    <img src="img/slide1.jpg" alt="Cerebellum">
+                    <img src="img/slide2.jpg" alt="Cerebellum">
                 </div>
             </div>
 
@@ -28,24 +29,24 @@
             <div class="w-full">
                 <div>
                     <!-- Conteúdo do SoundCloud iframe e formulário aqui -->
-                   <iframe width="100%" height="595" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1761536199%3Fsecret_token%3Ds-isfmVDMarz8&color=%23243c32&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/cerebellum-recs" title="Cerebellum Recs" target="_blank" style="color: #cccccc; text-decoration: none;">Cerebellum Recs</a> · <a href="https://soundcloud.com/cerebellum-recs/sets/cardao-guetto-rhythms-ep/s-isfmVDMarz8" title="CARDAO - GUETTO RHYTHMS EP" target="_blank" style="color: #cccccc; text-decoration: none;">CARDAO - GUETTO RHYTHMS EP</a></div>
+                  <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1769761938%3Fsecret_token%3Ds-RX4o2eCsvqP&color=%23424939&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/cerebellum-recs" title="Cerebellum Recs" target="_blank" style="color: #cccccc; text-decoration: none;">Cerebellum Recs</a> · <a href="https://soundcloud.com/cerebellum-recs/sets/andre-dias-resonancia-profunda-ep-crblm002/s-RX4o2eCsvqP" title="ANDRE DIAS - RESONANCIA PROFUNDA EP - CRBLM002" target="_blank" style="color: #cccccc; text-decoration: none;">ANDRE DIAS - RESONANCIA PROFUNDA EP - CRBLM002</a></div>
                 </div>
-                <div class="flex justify-center items-center mt-6">
-                    <a href="downloads\CARDAO-GUETTO RHYTHMS EP - CRBLM001 MP3-320.rar" class="bg-blue-800 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full ml-4">
-                        DOWNLOAD MP3
-                    </a>
+                <div class="flex justify-center items-center mt-6 mb-10">
+                    <button id="downloadBtn" class="bg-blue-800 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full" disabled>
+                        DOWNLOAD MP3 (Feedback)
+                    </button>
                 </div>
             </div>
         </div>
 
         <!-- FORMULARIO -->
        <div class="mt-6">
-        <form id="contact-form" action="https://formspree.io/f/mzbndegg" method="POST" class="mx-auto">
+        <form id="contact-form" action="https://formspree.io/f/xpzvpjyd" method="POST" class="mx-auto">
             <div class="form-group mb-6">
-                <input type="text" name="name" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7" placeholder="Nome" required>
+                <input type="text" name="name" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7" placeholder="Name" required>
             </div>
             <div class="form-group mb-6">
-                <input type="email" name="email" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8" placeholder="Endereço de Email" required>
+                <input type="email" name="email" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8" placeholder="Email Address" required>
             </div>
             <div class="form-group mb-6">
                 <textarea name="Feedback" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-yellow-500 focus:outline-none" id="exampleFormControlTextarea13" rows="3" placeholder="Feedback" required></textarea>
@@ -74,6 +75,20 @@
         </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script>
+        const feedbackForm = document.getElementById('contact-form');
+        const downloadButton = document.getElementById('downloadBtn');
+
+        feedbackForm.addEventListener('submit', function (event) {
+            const formElements = event.target.elements;
+            const feedbackProvided = Array.from(formElements).every((element) => element.value.trim() !== '');
+
+            downloadButton.disabled = !feedbackProvided;
+
+            if (!feedbackProvided) {
+                alert("Leave your feedback to download.");
+            }
+        });
+    </script>
 </body>
 </html>

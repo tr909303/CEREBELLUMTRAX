@@ -941,3 +941,46 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+        /* Add adjustments for smaller screens */
+        @media screen and (max-width: 767px) {
+            main {
+                padding: 0 16px;
+            }
+
+            .ml-64,
+            .mr-64 {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            .flex-1 {
+                flex: 1 1 0px !important;
+            }
+
+            .bg-black {
+                background-color: #000 !important;
+            }
+
+            .text-gray-600 {
+                color: #888 !important;
+            }
+
+            .form-control {
+                width: 100% !important;
+            }
+
+            .form-group {
+                margin-bottom: 1rem !important;
+            }
+
+            .grid-cols-1,
+            .grid-cols-2 {
+                grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+            }
+
+            iframe {
+                height: 30vh;
+            }
+        }
+ 
