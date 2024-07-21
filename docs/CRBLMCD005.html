@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEREBELLUM TRAX PROMO</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="bg-black text-gray-600 font-body">
+    <main class="ml-4 mr-4 lg:ml-64 lg:mr-64 bg-black">
+        <div class="mb-4">
+            <div class="flex justify-between items-center">
+                <img src="img/SOUNDCLOUD002.png" alt="Cerebellum Logo">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <!-- First Column -->
+            <div class="w-full">
+                <img src="img/slide5.png" alt="Cerebellum" class="w-full">
+            </div>
+
+            <!-- Second Column -->
+            <div class="w-full">
+                <!-- SoundCloud iframe and description -->
+                <div>
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1853041764%3Fsecret_token%3Ds-QUW75lFcIfK&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/cardao" title="Cardao_CerebellumTrax" target="_blank" style="color: #cccccc; text-decoration: none;">Cardao_CerebellumTrax</a> · <a href="https://soundcloud.com/cardao/sets/crblm005-veiga-cataplexy-ep/s-QUW75lFcIfK" title="CRBLM005. VEIGA - CATAPLEXY EP" target="_blank" style="color: #cccccc; text-decoration: none;">CRBLM005. VEIGA - CATAPLEXY EP</a></div>
+                    <div class="mt-4 text-white">
+                        DOWNLOAD WAV FILE HERE FROM SOUNDCLOUD, PLEASE DON'T FORGET TO LEAVE FEEDBACK.
+                    </div>
+                </div>
+                <div class="flex justify-center items-center mt-6">
+                    <a id="downloadBtn" href="downloads/CRBLM005. VEIGA - CATAPLEXY EP (mp3).zip" class="bg-blue-800 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full ml-4 disabled:opacity-50 disabled:cursor-not-allowed" download>
+                        DOWNLOAD MP3 (feedback)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Form -->
+        <div class="mt-6">
+            <form id="contact-form" action="https://formspree.io/f/mblrdlkg" method="POST" class="mx-auto">
+                <div class="form-group mb-6">
+                    <input type="text" name="name" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded transition ease-in-out focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Name" required>
+                </div>
+                <div class="form-group mb-6">
+                    <input type="email" name="email" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded transition ease-in-out focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Email Address" required>
+                </div>
+                <div class="form-group mb-6">
+                    <textarea name="Feedback" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded transition ease-in-out focus:text-gray-700 focus:bg-white focus:border-yellow-500 focus:outline-none" rows="3" placeholder="Feedback" required></textarea>
+                </div>
+                <button type="submit" class="w-full px-6 py-2.5 bg-blue-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-600 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-600 active:shadow-lg transition duration-150 ease-in-out">Send</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="flex flex-col items-center bg-black text-center text-white py-6">
+        <div class="container px-6 pt-6">
+            <div class="mb-6 flex justify-center">
+                <a href="#!" class="m-1 h-9 w-9 rounded-full border-2 border-white text-white flex justify-center items-center transition duration-150 ease-in-out hover:bg-opacity-5 focus:outline-none">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#!" class="m-1 h-9 w-9 rounded-full border-2 border-white text-white flex justify-center items-center transition duration-150 ease-in-out hover:bg-opacity-5 focus:outline-none">
+                    <ion-icon name="logo-soundcloud"></ion-icon>
+                </a>
+                <!-- Add more social icons as needed -->
+            </div>
+        </div>
+        <div class="w-full p-4">
+            © 2024 Copyright:
+            <a class="text-white hover:underline" href="#">Cerebellum</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            const form = event.target;
+            const formData = new FormData(form);
+            let allFilled = true;
+
+            for (const [key, value] of formData.entries()) {
+                if (!value.trim()) {
+                    allFilled = false;
+                    break;
+                }
+            }
+
+            if (allFilled) {
+                const downloadButton = document.getElementById('downloadBtn');
+                downloadButton.classList.remove('disabled:opacity-50', 'disabled:cursor-not-allowed');
+                downloadButton.removeAttribute('disabled');
+                alert('Thank you for your feedback! You can now download the MP3/WAV.');
+            } else {
+                alert('Please fill out all fields to proceed.');
+            }
+        });
+    </script>
+</body>
+</html>
