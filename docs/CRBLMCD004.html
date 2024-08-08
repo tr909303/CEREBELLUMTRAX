@@ -75,29 +75,7 @@
     </footer>
 
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the form from submitting the traditional way
-
-            const form = event.target;
-            const formData = new FormData(form);
-            let allFilled = true;
-
-            for (const [key, value] of formData.entries()) {
-                if (!value.trim()) {
-                    allFilled = false;
-                    break;
-                }
-            }
-
-            if (allFilled) {
-                const downloadButton = document.getElementById('downloadBtn');
-                downloadButton.classList.remove('disabled:opacity-50', 'disabled:cursor-not-allowed');
-                downloadButton.removeAttribute('disabled');
-                alert('Thank you for your feedback! You can now download the MP3/WAV.');
-            } else {
-                alert('Please fill out all fields to proceed.');
-            }
-        });
+       
     </script>
 </body>
 </html>
