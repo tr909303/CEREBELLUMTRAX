@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cerebellum Trax Promo - Download the latest tracks and leave your feedback.">
+    <meta name="keywords" content="Cerebellum, Trax, Promo, Music, Download, Feedback">
     <title>CEREBELLUM TRAX PROMO</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* Garantir que o vídeo cubra toda a área de fundo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -10; /* Coloca o vídeo atrás de todo o conteúdo */
+        }
+    </style>
 </head>
 <body class="bg-black text-gray-600 font-body">
-    <main class="ml-4 mr-4 lg:ml-64 lg:mr-64 bg-black">
+    <!-- Vídeo de fundo -->
+    <video id="backgroundVideo" src="slide15.mp4" loop autoplay muted playsinline class="video-background"></video>
+
+    <main class="ml-4 mr-4 lg:ml-64 lg:mr-64 bg-black bg-opacity-75 relative z-10">
         <div class="mb-4">
             <div class="flex justify-between items-center">
-                <img src="img/SOUNDCLOUD002.png" alt="Cerebellum Logo">
+                <img src="img/SOUNDCLOUD002.png" alt="Cerebellum Logo" class="w-90">
             </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <!-- First Column -->
             <div class="w-full">
-                <img src="img/slide6.png" alt="Cerebellum" class="w-full">
+                <img src="img/slide6.png" alt="Cerebellum Promo Art" class="w-full">
             </div>
 
             <!-- Second Column -->
             <div class="w-full">
                 <!-- SoundCloud iframe and description -->
                 <div>
-                    <iframe width="100%" height="444" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1974562780%3Fsecret_token%3Ds-c4KGett2Tw3&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/cerebellum-recs" title="Cerebellum Recs" target="_blank" style="color: #cccccc; text-decoration: none;">Cerebellum Recs</a> · <a href="https://soundcloud.com/cerebellum-recs/sets/frank-maurel-dont-make-ep-cardao-remix/s-c4KGett2Tw3" title="FRANK MAUREL - DONT MAKE EP  + CARDAO REMIX" target="_blank" style="color: #cccccc; text-decoration: none;">FRANK MAUREL - DONT MAKE EP  + CARDAO REMIX</a></div>
+                    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1974562780%3Fsecret_token%3Ds-c4KGett2Tw3&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                        <a href="https://soundcloud.com/cerebellum-recs" title="Cerebellum Recs" target="_blank" style="color: #cccccc; text-decoration: none;">Cerebellum Recs</a> · <a href="https://soundcloud.com/cerebellum-recs/sets/frank-maurel-dont-make-ep-cardao-remix/s-c4KGett2Tw3" title="FRANK MAUREL - DONT MAKE EP  + CARDAO REMIX" target="_blank" style="color: #cccccc; text-decoration: none;">FRANK MAUREL - DONT MAKE EP  + CARDAO REMIX</a>
+                    </div>
                     <div class="mt-4 text-white">
                         DOWNLOAD WAV FILE HERE FROM SOUNDCLOUD, PLEASE DON'T FORGET TO LEAVE FEEDBACK.
                     </div>
@@ -56,13 +76,13 @@
         </div>
     </main>
 
-    <footer class="flex flex-col items-center bg-black text-center text-white py-6">
+    <footer class="flex flex-col items-center bg-black text-center text-white py-6 relative z-10">
         <div class="container px-6 pt-6">
             <div class="mb-6 flex justify-center">
-                <a href="#!" class="m-1 h-9 w-9 rounded-full border-2 border-white text-white flex justify-center items-center transition duration-150 ease-in-out hover:bg-opacity-5 focus:outline-none">
+                <a href="#!" class="m-1 h-9 w-9 rounded-full border-2 border-white text-white flex justify-center items-center transition duration-150 ease-in-out hover:bg-opacity-5 focus:outline-none" aria-label="Instagram">
                     <ion-icon name="logo-instagram"></ion-icon>
                 </a>
-                <a href="#!" class="m-1 h-9 w-9 rounded-full border-2 border-white text-white flex justify-center items-center transition duration-150 ease-in-out hover:bg-opacity-5 focus:outline-none">
+                <a href="#!" class="m-1 h-9 w-9 rounded-full border-2 border-white text-white flex justify-center items-center transition duration-150 ease-in-out hover:bg-opacity-5 focus:outline-none" aria-label="SoundCloud">
                     <ion-icon name="logo-soundcloud"></ion-icon>
                 </a>
                 <!-- Add more social icons as needed -->
@@ -75,7 +95,11 @@
     </footer>
 
     <script>
-       
+        // Disable download button after first click
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            this.disabled = true;
+            this.classList.add('disabled');
+        });
     </script>
 </body>
 </html>
